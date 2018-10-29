@@ -1,0 +1,72 @@
+#add-athlete {
+    margin-left: 50px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(81, 36, 243);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    
+  }
+  #name-input{
+      background-color: aqua;
+
+  }
+  #add-athlete{
+      background-color: #627fe0;
+  }
+  
+  #add-athlete:hover {
+      background-color: #e062da;
+}
+  
+#form-group-row{
+    background-color: rgb(207, 135, 40);
+}
+  #add-athlete:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
+  #btn-btn-default{
+    margin-left: 50px;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(5, 207, 140);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+  #players {
+    background-color: #4CAF50;
+    border: none;
+    color: rgb(112, 170, 245);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+.col-lg-3{
+    float: left;
+    margin-left: 950px;
+}
