@@ -26,7 +26,7 @@ var athletes = ["Scottie Pippen",
 
 
  function getGiphy(){
- $("#player-id1").on("click", function() {
+ $("#buttonContainer").on("click", function() {
 
  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + athletes + "&api_key=gQ4igNIvK0bFHvaUeM0uiQj04piZpaDn&limit=10&rating=G"
           
