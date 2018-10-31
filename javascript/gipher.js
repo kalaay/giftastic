@@ -1,4 +1,4 @@
-var topics = ["Scottie Pippen", 
+var athletes = ["Scottie Pippen", 
               "B.J Armstrong", 
               "Bill Cartwright", 
               "Luke Longley", 
@@ -17,29 +17,50 @@ var topics = ["Scottie Pippen",
               "Luol Deng",
               "Taj Gibson",
               "Phill Jackson",
-              "Tom Thibodeau"]
-              
-              
-              
-              $("#scottie-button").on("click", function() {
+              "Tom Thibodeau"];
 
-              var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=gQ4igNIvK0bFHvaUeM0uiQj04piZpaDn&limit=10&rating=G";
           
-                $.ajax({
-                  url: queryURL,
-                  method: "GET"
-                })
+              getGiphy();
+
+
+
+
+ function getGiphy(){
+ $("#player-id1").on("click", function() {
+
+ var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + athletes + "&api_key=gQ4igNIvK0bFHvaUeM0uiQj04piZpaDn&limit=10&rating=G"
           
-                  .then(function(response) {
-          
-                    var imageUrl = data.type;
+                 $.ajax({
+                   url: queryURL,
+                   method: "GET"
+                 })
+                
+                   .then(function(response) {
+                    var imageUrl = response.data[0].images.original.url;
                     var athletesImg = $("<img>");
           
-                    athletesImg.attr("src", imageUrl);
-                    athletesImg.attr("alt", "athlete image");
-          
-                    $("#images").prepend(athletesImg);
-                  });
-              });
+                     athletesImg.attr("src", imageUrl);
+                     athletesImg.attr("alt", "athlete image");
+                         $(".gifContainer").prepend(athletesImg);
+                 });
+               });
+  }
+
+
+
+
+
+//function addButton() {
+  //$("#buttonContainer").empty();
+  //for (var i = 0; i < athletes.length; i++) {
+   // var button = $("<button>");
+   // athletes.addClass("players");
+   // athletes.attr("data-people", athletes[i]);
+   // athletes.text(athletes[i]);
+   // $("#buttonContainer").append(athletes);
+ // }
+//}
+
+
           
 
